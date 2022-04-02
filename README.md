@@ -10,7 +10,7 @@ Setting up the environment for a React-TypeScript project :
 
 ---In addition, we need to install some more necessary things:
 
-*) Support for REACT
+*)Library support for REACT
 
 +) npm i react-hook-form (React Hook Form (RHF) is a form management library for ReactJS)
-+) npm i react-router-dom
++) npm i react-router-dom (React-router-dom is a standard routing library in React)
