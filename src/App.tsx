@@ -10,31 +10,16 @@ import Dashboard from './pages/Dashboard'
 import UserLayout from './pages/layouts/UserLayout'
 import AdminLayout from './pages/layouts/AdminLayout'
 
+import "bootstrap/dist/css/bootstrap.min.css"
 type TProduct = {
   id: number,
   name: string
 }
 
 function App() {
-  const [info, setInfo] = useState<ProductType>({
-    name: "Dinh",
-    age: 20
-  })
   return (
     <div className="App">
-      <ShowInfo info={info} />
-      <header>
-        <ul>
-          <li><NavLink to="/">Home Page</NavLink></li>
-          <li><NavLink to="/product">Product</NavLink></li>
-          <li><NavLink to="/admin/dashboard">Admin Dashboard</NavLink></li>
-        </ul>
-      </header>
-      <main>
         <Routes>
-          {/* <Route path='/' element={<Home/>} />
-          <Route path='/product' element={<Product/>} />
-          <Route path='/admin/dashboard' element={<Dashboard/>} /> */}
           <Route path='/' element={<UserLayout/>}>
               <Route index element={<Home/>}/>
               <Route path='product' element={<Product/>}/>
@@ -45,7 +30,6 @@ function App() {
               <Route path='product' element={<Product/>}/>
           </Route>
         </Routes>
-      </main>
     </div>
   )
 }
