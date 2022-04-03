@@ -20,7 +20,6 @@ type TProduct = {
 
 function App() {
   return (
-    <div className="App">
         <Routes>
           <Route path='/' element={<UserLayout/>}>
               <Route index element={<Home/>}/>
@@ -35,7 +34,6 @@ function App() {
               </Route>
           </Route>
         </Routes>
-    </div>
   )
 }
 

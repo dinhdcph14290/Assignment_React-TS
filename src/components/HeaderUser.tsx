@@ -5,7 +5,7 @@ type Props = {}
 
 const HeaderUser = (props: Props) => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
         <NavLink className="navbar-brand" to="#">Navbar</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,13 +17,13 @@ const HeaderUser = (props: Props) => {
                 <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/product">Product</NavLink>
+                <NavLink className="nav-link active" to="/product">Product</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/admin">Dashboard Admin</NavLink>
+                <NavLink className="nav-link active" to="/admin">Dashboard Admin</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/admin/product">ManagerProduct</NavLink>
+                <NavLink className="nav-link active" to="/admin/product">ManagerProduct</NavLink>
             </li>
             </ul>
             <form className="d-flex">
@@ -33,6 +33,9 @@ const HeaderUser = (props: Props) => {
         </div>
         </div>
     </nav>
+
+        
+        
     )
 }
 

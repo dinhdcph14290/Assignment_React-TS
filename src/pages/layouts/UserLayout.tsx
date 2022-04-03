@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import FooterUser from '../../components/FooterUser'
 import HeaderUser from '../../components/HeaderUser'
 
 type Props = {}
@@ -13,7 +14,9 @@ const UserLayout = (props: Props) => {
         <main>
             <Outlet/>
         </main>
-        <footer>Footer User</footer>
+        <footer>
+            <FooterUser />
+        </footer>
     </div>
     )
 }
