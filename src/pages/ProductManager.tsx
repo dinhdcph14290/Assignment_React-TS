@@ -2,7 +2,8 @@ import React from 'react'
 import { ProductType } from '../types/product'
 
 type ProductManagerProps = {
-    data: ProductType[];
+    data: ProductType[],
+    onRemove: (id:number) => void;
 }
 
 const ProductManager = (props: ProductManagerProps) => {
@@ -22,7 +23,7 @@ const ProductManager = (props: ProductManagerProps) => {
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
                         <td>
-                        {/* <button onClick={() => removeItem(item._id)}>Remove</button> */}
+                        <button onClick={() => props.onRemove(item.id)}>Remove</button>
                         </td>
                     </tr>
             })}

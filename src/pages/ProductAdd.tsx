@@ -12,8 +12,7 @@ type FormValues = {
 const ProductAdd = (props: ProductAddProps) => {
     const {register, handleSubmit, formState: {errors}} = useForm<FormValues>()
     const onSubmit:SubmitHandler<FormValues> = (data) => {
-        console.log(data)
-        // props.onAdd(data)
+        props.onAdd(data)
     }
     return (
     <div className='container-sm'>

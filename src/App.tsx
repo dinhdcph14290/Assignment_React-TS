@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import ProductAdd from './pages/ProductAdd'
 import ProductManager from './pages/ProductManager'
 import axios from 'axios'
-import { list } from './api/product'
+import { add, list, remove } from './api/product'
 
 type TProduct = {
   id: number,
@@ -31,20 +31,28 @@ useEffect(() => {
   }
   getProducts();
 },[])
-const onHandleAdd = (product: ProductType) => {
-  console.log('app.js', product)
+const onHandleRemove = async (id: number) => {
+  await remove(id);
+  setProducts(products.filter(item => item.id !== id));
 }
+const onHandleAdd = async (product: ProductType) => {
+  // Call API
+  add(product);
+  const {data} = await add(product)
+  setProducts([...products, product])
+}
+
   return (
         <Routes>
           <Route path='/' element={<UserLayout/>}>
               <Route index element={<Home/>}/>
-              <Route path='product' element={<Product/>}/>
+              <Route path='products' element={<Product/>}/>
           </Route>
           <Route path='admin' element={<AdminLayout/>}>
                 <Route index element={<Navigate to="dashboard"/>}/>
                 <Route path='dashboard' element={<Dashboard/>}/>
                 <Route path='products'>
-                  <Route index element={<ProductManager data={products}/>}/>
+                  <Route index element={<ProductManager data={products} onRemove={onHandleRemove}/>}/>
                   <Route path='add' element={<ProductAdd onAdd={onHandleAdd}/>}/>
               </Route>
           </Route>
