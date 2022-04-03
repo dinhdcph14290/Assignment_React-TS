@@ -12,6 +12,7 @@ import AdminLayout from './pages/layouts/AdminLayout'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import ProductAdd from './pages/ProductAdd'
+import ProductManager from './pages/ProductManager'
 type TProduct = {
   id: number,
   name: string
@@ -26,10 +27,12 @@ function App() {
               <Route path='product' element={<Product/>}/>
           </Route>
           <Route path='admin' element={<AdminLayout/>}>
-              <Route index element={<Navigate to="dashboard"/>}/>
-              <Route path='dashboard' element={<Dashboard/>}/>
-              <Route path='product' element={<Product/>} />
-              <Route path='/admin/product/add' element={<ProductAdd/>}/>
+                <Route index element={<Navigate to="dashboard"/>}/>
+                <Route path='dashboard' element={<Dashboard/>}/>
+                <Route path='products'>
+                  <Route index element={<ProductManager/>}/>
+                  <Route path='add' element={<ProductAdd/>}/>
+              </Route>
           </Route>
         </Routes>
     </div>
