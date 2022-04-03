@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import ProductAdd from './pages/ProductAdd'
 import ProductManager from './pages/ProductManager'
 import axios from 'axios'
+import "antd/dist/antd.css";
 import { add, list, remove } from './api/product'
 
 type TProduct = {
