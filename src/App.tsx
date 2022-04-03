@@ -11,6 +11,7 @@ import UserLayout from './pages/layouts/UserLayout'
 import AdminLayout from './pages/layouts/AdminLayout'
 
 import "bootstrap/dist/css/bootstrap.min.css"
+import ProductAdd from './pages/ProductAdd'
 type TProduct = {
   id: number,
   name: string
@@ -27,7 +28,8 @@ function App() {
           <Route path='admin' element={<AdminLayout/>}>
               <Route index element={<Navigate to="dashboard"/>}/>
               <Route path='dashboard' element={<Dashboard/>}/>
-              <Route path='product' element={<Product/>}/>
+              <Route path='product' element={<Product/>} />
+              <Route path='/admin/product/add' element={<ProductAdd/>}/>
           </Route>
         </Routes>
     </div>
