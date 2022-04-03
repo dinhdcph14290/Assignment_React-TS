@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { ProductType } from '../types/product'
 import { Table, Tag, Space } from 'antd';
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 
 type ProductManagerProps = {
     data: ProductType[],
@@ -22,7 +23,17 @@ const columns = [
     dataIndex: 'price',
     key: 'price',
 },
-]
+{
+    title: 'Action',
+    key: 'action',
+    render: () => (
+    <Space size="middle">
+        <a><EditOutlined /></a>
+        <a><DeleteOutlined /></a>
+    </Space>
+    ),
+},
+];
 const ProductManager = (props: ProductManagerProps) => {
     const dataSource = props.data.map((item, index) => {
         return {
