@@ -44,7 +44,7 @@ const onHandleAdd = (product: ProductType) => {
                 <Route index element={<Navigate to="dashboard"/>}/>
                 <Route path='dashboard' element={<Dashboard/>}/>
                 <Route path='products'>
-                  <Route index element={<ProductManager/>}/>
+                  <Route index element={<ProductManager data={products}/>}/>
                   <Route path='add' element={<ProductAdd onAdd={onHandleAdd}/>}/>
               </Route>
           </Route>

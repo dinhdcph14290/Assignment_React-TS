@@ -12,8 +12,8 @@ type FormValues = {
 const ProductAdd = (props: ProductAddProps) => {
     const {register, handleSubmit, formState: {errors}} = useForm<FormValues>()
     const onSubmit:SubmitHandler<FormValues> = (data) => {
-        // console.log(data)
-        props.onAdd(data)
+        console.log(data)
+        // props.onAdd(data)
     }
     return (
     <div className='container-sm'>
@@ -21,12 +21,13 @@ const ProductAdd = (props: ProductAddProps) => {
             <div className="mb-3">
                 <label className="form-label">Product's name</label>
                 <input type="text" className="form-control" {...register('name',{required: true, minLength:6})} />
-                {errors.name && errors.name.type === "required" && <span>Require</span>}
-                {errors.name && errors.name.type === "minLength" && <span>Min Length</span>}
+                {errors.name && errors.name.type === "required" && <span className ="text-danger">This field cannot be left blank!</span>}
+                {errors.name && errors.name.type === "minLength" && <span className ="text-danger">Length must be greater than or equal to 6</span>}
             </div>
             <div className="mb-3">
                 <label className="form-label">Product Price</label>
                 <input type="number" className="form-control" {...register('price',{required:true})}/>
+                {errors.price && errors.price.type === "required" && <span className ="text-danger">This field cannot be left blank!</span>}
             </div>
             <button className="btn btn-primary">ADD</button>
         </form>
