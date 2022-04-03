@@ -1,15 +1,19 @@
 import React from 'react'
 import {useForm, SubmitHandler} from 'react-hook-form'
+import { ProductType } from '../types/product';
 
-type Props = {}
+type ProductAddProps = {
+    onAdd: (product: ProductType) => void
+}
 type FormValues = {
     name: string,
     price: number,
 };
-const ProductAdd = (props: Props) => {
+const ProductAdd = (props: ProductAddProps) => {
     const {register, handleSubmit, formState: {errors}} = useForm<FormValues>()
     const onSubmit:SubmitHandler<FormValues> = (data) => {
-        console.log(data)
+        // console.log(data)
+        props.onAdd(data)
     }
     return (
     <div className='container-sm'>

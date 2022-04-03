@@ -23,7 +23,7 @@ const HeaderUser = (props: Props) => {
                 <NavLink className="nav-link active" to="/admin">Dashboard Admin</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/admin/product">ManagerProduct</NavLink>
+                <NavLink className="nav-link active" to="/admin/products">ManagerProduct</NavLink>
             </li>
             </ul>
             <form className="d-flex">
