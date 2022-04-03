@@ -9,7 +9,7 @@ export const remove = (id: number) => {
     const url = `/products/${id}`;
     return root.delete(url);
 }
-export const add = (product) => {
+export const add = (product : ProductType) => {
     const url = `/products`;
     return root.post(url, product)
 }
