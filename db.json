@@ -1,32 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Product A",
-      "price": 30000
-    },
-    {
-      "id": 2,
-      "name": "Product A",
-      "price": 30000
-    },
-    {
-      "id": 3,
-      "name": "Product A",
-      "price": 30000
-    },
-    {
-      "id": 4,
-      "name": "Product A",
-      "price": 30000
-    },
-    {
-      "id": 5,
-      "name": "Product A",
-      "price": 30000
-    },
-    {
-      "name": "Product C",
+      "name": "Product C update",
       "price": "222222",
       "id": 9
     },
@@ -34,26 +9,6 @@
       "name": "Product C2",
       "price": "23333",
       "id": 11
-    },
-    {
-      "name": "Product E",
-      "price": "22",
-      "id": 12
-    },
-    {
-      "name": "Product E",
-      "price": "22",
-      "id": 13
-    },
-    {
-      "name": "Product D",
-      "price": "2000",
-      "id": 14
-    },
-    {
-      "name": "Product D",
-      "price": "2000",
-      "id": 15
     }
   ]
 }

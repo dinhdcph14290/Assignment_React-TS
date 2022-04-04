@@ -15,12 +15,8 @@ import ProductAdd from './pages/admin/ProductAdd'
 import ProductManager from './pages/admin/ProductManager'
 import axios from 'axios'
 import "antd/dist/antd.css";
-import { add, list, remove } from './api/product'
-
-type TProduct = {
-  id: number,
-  name: string
-}
+import { add, list, remove, update } from './api/product'
+import ProductEdit from './pages/admin/ProductEdit'
 
 function App() {
   const [products,setProducts] = useState<ProductType[]>([]);
@@ -42,7 +38,11 @@ const onHandleAdd = async (product: ProductType) => {
   const {data} = await add(product)
   setProducts([...products, product])
 }
-
+const onHandleUpdate = async (product: ProductType) => {
+  console.log(product)
+  const {data} = await update(product);
+  setProducts(products.map(item => item.id == data.id ? data : item))
+}
   return (
         <Routes>
           <Route path='/' element={<UserLayout/>}>
@@ -55,6 +55,7 @@ const onHandleAdd = async (product: ProductType) => {
                 <Route path='products'>
                   <Route index element={<ProductManager data={products} onRemove={onHandleRemove}/>}/>
                   <Route path='add' element={<ProductAdd onAdd={onHandleAdd}/>}/>
+                  <Route path=':id/edit' element={<ProductEdit onUpdate={onHandleUpdate}/>}/>
               </Route>
           </Route>
         </Routes>

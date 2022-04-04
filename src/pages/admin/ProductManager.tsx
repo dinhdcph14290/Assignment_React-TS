@@ -8,33 +8,33 @@ type ProductManagerProps = {
     data: ProductType[],
     onRemove: (id:number) => void;
 }
-interface DataType {
-    key: React.Key;
-    name: string;
-    price: number
-}
-const columns = [
-{   
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-},
-{
-    title: 'Price',
-    dataIndex: 'price',
-    key: 'price',
-},
-{
-    title: 'Action',
-    key: 'action',
-    render: () => (
-    <Space size="middle">
-        <Link to={`/edit`}><EditOutlined /></Link>
-        <Button type='primary' danger><DeleteOutlined /></Button>
-    </Space>
-    ),
-},
-];
+// interface DataType {
+//     key: React.Key;
+//     name: string;
+//     price: number
+// }
+// const columns = [
+// {   
+//     title: 'Name',
+//     dataIndex: 'name',
+//     key: 'name',
+// },
+// {
+//     title: 'Price',
+//     dataIndex: 'price',
+//     key: 'price',
+// },
+// {
+//     title: 'Action',
+//     key: 'action',
+//     render: () => (
+//     <Space size="middle">
+//         <Link to={`/edit`}><EditOutlined /></Link>
+//         <Button type='primary' danger><DeleteOutlined /></Button>
+//     </Space>
+//     ),
+// },
+// ];
 const ProductManager = (props: ProductManagerProps) => {
     const dataSource = props.data.map((item, index) => {
         return {
@@ -45,8 +45,8 @@ const ProductManager = (props: ProductManagerProps) => {
     });
     return (
         <div className='container'>
-            <Table columns={columns} dataSource={dataSource} />
-            {/* <table className='table table-bordered'>
+            {/* <Table columns={columns} dataSource={dataSource} /> */}
+            <table className='table table-bordered'>
             <thead>
                 <tr>
                     <th>#</th>
@@ -60,14 +60,14 @@ const ProductManager = (props: ProductManagerProps) => {
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
                         <td>
-                        <Link to={`/admin/product/${item.id}/edit`}>Edit</Link>
+                        <Link to={`/admin/products/${item.id}/edit`}>Edit</Link>
                         <button onClick={() => props.onRemove(item.id)}>Remove</button>
                         </td>
                     </tr>
             })}
             
             </tbody>
-      </table> */}
+    </table>
         </div>
     )
 }

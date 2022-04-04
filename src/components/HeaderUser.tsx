@@ -14,21 +14,21 @@ const HeaderUser = (props: Props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                <NavLink className="nav-link active fs-5" aria-current="page" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/product">Product</NavLink>
+                <NavLink className="nav-link active fs-5" to="/products">Product</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/admin">Dashboard Admin</NavLink>
+                <NavLink className="nav-link active fs-5" to="/admin">Dashboard Admin</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/admin/products">ManagerProduct</NavLink>
+                <NavLink className="nav-link active fs-5" to="/admin/products">ManagerProduct</NavLink>
             </li>
             </ul>
             <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-outline-light" type="submit">Search</button>
             </form>
         </div>
         </div>

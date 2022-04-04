@@ -13,3 +13,11 @@ export const add = (product : ProductType) => {
     const url = `/products`;
     return root.post(url, product)
 }
+export const update = (product: ProductType) => {
+    const url = `/products/${product.id}`;
+    return root.put(url, product)
+}
+export const read = (id: number) => {
+    const url = `/products/${id}`;
+    return root.get(url)
+}
