@@ -1,3 +1,4 @@
+import { RobotOutlined } from '@ant-design/icons'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -20,13 +21,11 @@ const HeaderUser = (props: Props) => {
                 <NavLink className="nav-link active fs-5" to="/products">Product</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link active fs-5" to="/admin">Dashboard Admin</NavLink>
-            </li>
-            <li className="nav-item">
                 <NavLink className="nav-link active fs-5" to="/admin/products">ManagerProduct</NavLink>
             </li>
             </ul>
             <form className="d-flex">
+            <NavLink className="nav-link active" to="/admin">Admin</NavLink>
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-outline-light" type="submit">Search</button>
             </form>
