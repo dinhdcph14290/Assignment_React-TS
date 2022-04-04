@@ -11,8 +11,8 @@ import UserLayout from './pages/layouts/UserLayout'
 import AdminLayout from './pages/layouts/AdminLayout'
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import ProductAdd from './pages/ProductAdd'
-import ProductManager from './pages/ProductManager'
+import ProductAdd from './pages/admin/ProductAdd'
+import ProductManager from './pages/admin/ProductManager'
 import axios from 'axios'
 import "antd/dist/antd.css";
 import { add, list, remove } from './api/product'

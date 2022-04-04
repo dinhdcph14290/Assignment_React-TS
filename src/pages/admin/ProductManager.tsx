@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { ProductType } from '../types/product'
+import { ProductType } from '../../types/product'
 import { Table, Tag, Space, Button } from 'antd';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
