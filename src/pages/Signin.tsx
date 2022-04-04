@@ -20,7 +20,7 @@ const Signin = () => {
     return (
     <div>
         <form action="" onSubmit={handleSubmit(onSubmit)}>
-            <input type="email"{...register('email'),{required:true}} />
+            <input type="email"{...register('email',{required:true})} />
             <input type="password"{...register('password')} />
             <button>Dang nhap</button>
         </form>
