@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import ShowInfo from './components/ShowInfo'
 import { ProductType } from './types/product'
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
