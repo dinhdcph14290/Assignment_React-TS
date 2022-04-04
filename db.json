@@ -6,9 +6,19 @@
       "id": 9
     },
     {
-      "name": "Product C2",
+      "name": "Product C2 hihi",
       "price": "23333",
       "id": 11
+    },
+    {
+      "name": "Product D",
+      "price": "33333",
+      "id": 12
+    },
+    {
+      "name": "Product D",
+      "price": "33333",
+      "id": 13
     }
   ]
 }

@@ -17,6 +17,8 @@ import axios from 'axios'
 import "antd/dist/antd.css";
 import { add, list, remove, update } from './api/product'
 import ProductEdit from './pages/admin/ProductEdit'
+import Signup from './pages/Signup'
+import Signin from './pages/Signin'
 
 function App() {
   const [products,setProducts] = useState<ProductType[]>([]);
@@ -48,6 +50,8 @@ const onHandleUpdate = async (product: ProductType) => {
           <Route path='/' element={<UserLayout/>}>
               <Route index element={<Home/>}/>
               <Route path='products' element={<Product/>}/>
+              <Route path='signup' element={<Signup/>}/>
+              <Route path='signin' element={<Signin/>}/>
           </Route>
           <Route path='admin' element={<AdminLayout/>}>
                 <Route index element={<Navigate to="dashboard"/>}/>
