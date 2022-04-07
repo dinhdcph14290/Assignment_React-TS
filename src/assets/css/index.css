@@ -1,0 +1,348 @@
+/* Reset CSS */
+/* @font-face {
+    font-family: Quicksand ;
+    src: url(./font/webwerf-tipe/Quicksand_Bold.ttf);
+} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+/* header CSS */
+.top-bar ul li a{
+    color: #000;
+    text-decoration: none;
+}
+.number-phone,
+.Account,
+.Cart{
+    padding-left: 7px;
+}
+.top-bar{
+    background: #f2f2f2;
+    font-size: 14px;
+    padding: 4px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 28px;
+}
+.top-bar__left{
+    text-align: left;
+}
+.top-bar__left ul{
+    padding-left: 40px;
+}
+.top-bar__right{
+    text-align: right;
+}
+.top-bar__right ul{
+    padding-right: 40px;
+}
+.site-header{
+    display: grid;
+    grid-template-columns: 17% 67% 17%;
+    padding: 10px 40px;
+}
+.logo-4men{
+    height: 94px;
+}
+.sticky {
+    padding: 0 40px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 10px 26px rgb(0 0 0 / 20%);;
+  }
+  .sticky > .btn{
+      top: 20px;
+  }
+.nav ,.footer{
+    margin: 0 auto;
+}
+.nav li{
+    display: inline-block;
+    position: relative;
+}
+.top-bar ul li{
+    display: inline-block;
+    margin-right:50px ;
+}
+.nav li a{
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    line-height: 55px;
+    padding: 0 15px;
+}
+.nav li:hover .sub_menu{
+    display: block;
+}
+
+.sub_menu{
+    padding: 0;
+}
+.nav .sub_menu{
+    border-radius: 5px;
+    display: none;
+    min-width: 113px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow:0 9px 12px rgb(0 0 0 / 30%);;
+}
+.menu,.sub_menu{
+    list-style-type: none;
+}
+.sub_menu> li > a{
+    color: #666;
+    font-size: 14px;
+    font-weight: 700;
+}
+.sub_menu> li > a:hover{
+    color: #000;
+}
+.menu ul .nav{
+    text-align: center;
+}
+
+.hover{
+    margin-top: 20px;
+    color: #000;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 13px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.5s;
+    z-index: 2;
+    overflow: hidden;
+} 
+.hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: black;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.24, 0.89, 0.68, -0.37);
+}
+.hover:hover {
+color: #fff;
+}
+.hover:hover:before {
+height: 300%;
+transform: translate(-50%, -50%) rotate(45deg);
+}
+.form-control ,.btn-dark {
+    border-radius: 5rem;
+}
+.slider a img{
+    max-width: 1519.2px;
+}
+.input-group {
+    margin-top: 33px;
+}
+.search{
+    position: relative;
+}
+#inputForm{
+    margin-top: 26px;
+}
+.btn{
+    font-size: 22px;
+    position: absolute;
+    right: 0rem;
+    top: 22px;
+}
+.slider,.sub-banner{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+/* Body CSS */
+.content{
+    width:1448px ;
+    margin: 0 auto;
+}
+.title-products{
+    margin: 40px 0;
+}
+.products{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+}
+.item-product{
+    padding-top: 40px;
+}
+.item-product a img{
+    height: 420px;
+}
+.btn__item-product{
+    width: 100%;
+    margin-top: 20px;
+}
+.btn__item-product a{
+    font-size: 13px;
+    text-decoration: none;
+    padding: 5px 18px;
+    color: #fff;
+    background-color: #000;
+    margin-left: -4px;
+}
+.name-product a{
+    text-decoration: none;
+    color: #000;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    min-height: 20px;
+}
+.price{
+    font-size: 14px;
+    font-weight: 700;
+}
+.sub-banner{
+    margin: 90px 0 40px 0;
+    padding-bottom: 40px;
+}
+/* Footer CSS */
+.infoFooter{
+    max-width: 1375px;
+    margin: 0 auto;
+    padding: 40px;
+    border-top: 1px solid #d0d0d0;
+    display: grid;
+    grid-template-columns: 25% 25% 30% 20%;
+}
+.iconFooter {
+    float: left;
+    width: 25px;
+    height: 25px;
+    background: #e52c25;
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+    border-radius: 100%;
+    margin-top: 8px;
+}
+.titleHotline{
+    font-size: 27px;
+    padding: 0 0 0 15px;
+}
+.fa-phone:before {
+    content: "\f095";
+}
+h4{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.moreInfoFooter{
+    float: left;
+    width: 100%;
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+ul.navbar-social{
+    font-size: 29px;
+    padding-left: 0;
+}
+.follow-us{
+    padding-left: 60px;
+}
+.footerBottom{
+    display: grid;
+    grid-template-columns: 24% 16% 25% 29%;
+    background-color: #f1f1f1;
+    grid-gap: 30px;
+}
+.infoFooter h4{
+    font-size: 14px;
+}
+.footerBottom  h5{
+    font-weight: 600;
+    padding: 20px 0;
+    font-size: 15px;
+}
+.footerBottom p ,.policise-item li a{
+    font-size: 14px;
+}
+.policies{
+    padding-left: 111px;
+}
+.policise-item {
+    padding: 0;
+}
+.policise-item li{
+    list-style-type: none;
+    padding: 8px 0;
+}
+.policise-item li a{
+    text-decoration: none;
+    color: #000;
+}
+.system{
+    padding-left: 0;
+}
+.icon-social ul li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 35px;
+}
+.navbar-icon__links{
+    color: #000;
+}
+.input_regBot{
+    margin-top:4px;
+    padding: 10px 16px;
+    border: 1px solid #d0d0d0;
+    font-size: 15px;
+    height: 36px;
+}
+.btn__register{
+    margin-left: -5px;
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    height: 36px;
+}
+.our_fanpage{
+    padding-left: 25px;
+}
+.bottomBar{
+    line-height: 44px;
+    text-align: center;
+    padding-right: 142px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #000;
+}
+.bttop{
+    display: none;
+    text-align: center;
+    position: fixed;
+    bottom: 130px;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    font-weight: 900;
+    transform: rotate(-90deg);
+    z-index: 99;
+    right: -30px;
+}
+.text-bttop{
+    float: left;
+    margin: -3px 10px;
+}
+    

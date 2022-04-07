@@ -31,18 +31,18 @@ useEffect(() => {
 },[])
 const onHandleRemove = async (id: number) => {
   await remove(id);
-  setProducts(products.filter(item => item.id !== id));
+  setProducts(products.filter(item => item._id !== id));
 }
 const onHandleAdd = async (product: ProductType) => {
   // Call API
   add(product);
   const {data} = await add(product)
+  console.log(data)
   setProducts([...products, product])
 }
 const onHandleUpdate = async (product: ProductType) => {
-  console.log(product)
   const {data} = await update(product);
-  setProducts(products.map(item => item.id == data.id ? data : item))
+  setProducts(products.map(item => item._id == data._id ? data : item))
 }
   return (
         <Routes>

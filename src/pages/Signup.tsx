@@ -19,11 +19,11 @@ const Signup = () => {
     return (
     <div>
         <form action="" onSubmit = {handleSubmit(onSubmit)}>
-            <input type="text" {...register('name',{required:true, minLength: 6})} />
+            <input type="text" placeholder='Ten dang nhap' {...register('name',{required:true, minLength: 6})} />
             {errors.name && errors.name.type === "required" && <span> Require</span>}
             {errors.name && errors.name.type === "minLength" && <span> Min Length</span>}
-            <input type="email"{...register('email',{required:true})} />
-            <input type="password"{...register('password',{required: true})} />
+            <input type="email" placeholder='emai'{...register('email',{required:true})} />
+            <input type="password" placeholder='Password' {...register('password',{required: true})} />
             <button>Register</button>
         </form>
     </div>

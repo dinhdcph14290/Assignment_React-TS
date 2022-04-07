@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 type ProductManagerProps = {
     data: ProductType[],
-    onRemove: (id:number) => void;
+    onRemove: (_id:number) => void;
 }
 // interface DataType {
 //     key: React.Key;
@@ -60,8 +60,8 @@ const ProductManager = (props: ProductManagerProps) => {
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
                         <td>
-                        <Link to={`/admin/products/${item.id}/edit`}>Edit</Link>
-                        <button onClick={() => props.onRemove(item.id)}>Remove</button>
+                        <Link to={`/admin/products/${item._id}/edit`}>Edit</Link>   
+                        <button onClick={() => props.onRemove(item._id)}>Remove</button>
                         </td>
                     </tr>
             })}

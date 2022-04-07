@@ -14,7 +14,7 @@ export const add = (product : ProductType) => {
     return root.post(url, product)
 }
 export const update = (product: ProductType) => {
-    const url = `/products/${product.id}`;
+    const url = `/products/${product._id}`;
     return root.put(url, product)
 }
 export const read = (id: number) => {
