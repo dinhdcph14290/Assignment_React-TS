@@ -2,6 +2,7 @@ import { RobotOutlined } from '@ant-design/icons'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Menu from './Menu'
+import Slide from './Slide'
 
 type Props = {}
 
@@ -33,7 +34,7 @@ const HeaderUser = (props: Props) => {
     //     </div>
     //     </div>
     // </nav>
-    <Menu/>
+    <><Menu /><Slide /></>
     )
 }
 
