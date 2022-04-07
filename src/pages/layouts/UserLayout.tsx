@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom'
 import FooterUser from '../../components/FooterUser'
 import HeaderUser from '../../components/HeaderUser'
 
-type Props = {}
+type UserLayoutProps = {}
 
-const UserLayout = (props: Props) => {
+const UserLayout = (props: UserLayoutProps) => {
     return (
     <div>
         <header>
