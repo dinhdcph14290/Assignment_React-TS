@@ -1,4 +1,3 @@
-// Sticky Header - W3C 
 window.onscroll = function () { myFunction() };
 var header = document.getElementById("main-header");
 var sticky = header.offsetTop;
