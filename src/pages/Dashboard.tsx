@@ -8,8 +8,9 @@ const Dashboard = (props: Props) => {
         <div className="box">
         <div className="right-side">
             <div className="box-topic">Total Order</div>
-            <div className="number">40,876</div>
+            <div className="number">99,999+</div>
             <div className="indicator">
+            <i className="bx bx-up-arrow-alt" />
             <span className="text">Up from yesterday</span>
             </div>
         </div>
@@ -18,7 +19,7 @@ const Dashboard = (props: Props) => {
         <div className="box">
         <div className="right-side">
             <div className="box-topic">Total Sales</div>
-            <div className="number">38,876</div>
+            <div className="number">20,000</div>
             <div className="indicator">
             <i className="bx bx-up-arrow-alt" />
             <span className="text">Up from yesterday</span>
@@ -29,7 +30,7 @@ const Dashboard = (props: Props) => {
         <div className="box">
         <div className="right-side">
             <div className="box-topic">Total Profit</div>
-            <div className="number">$12,876</div>
+            <div className="number">$92,901</div>
             <div className="indicator">
             <i className="bx bx-up-arrow-alt" />
             <span className="text">Up from yesterday</span>

@@ -11,13 +11,13 @@ return (
     </div>
     <ul className="nav-links">
         <li>
-        <a href="#" className="active">
+        <a href="http://localhost:3000/admin/dashboard" className="active">
         <i className='bx bx-grid-alt' ></i>
             <span className="links_name">Dashboard</span>
         </a>
         </li>
         <li>
-        <a href="#">
+        <a href="http://localhost:3000/admin/products">
             <i className="bx bx-box" />
             <span className="links_name">Product</span>
         </a>
